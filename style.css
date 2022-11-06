@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+.clock{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(171-1717365_jam-png-4-png-image-6-clock.png);
+  
+    mix-blend-mode: multiply;
+    background-size: cover;
+    box-shadow: 0 -100px 100px rgb(63, 45, 226),
+                /* inset 0 -15px, 15px #191919, */
+                0 100px 100px rgb(241, 226, 6);
+                /* inset 0 15px, 15px #191919; */
+    border-radius: 50%;
+    
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(12, 12, 12);
+    border-radius: 50%;
+    z-index: 999;
+}
+.hour,
+.min,
+.sec{
+    position: absolute;
+}
+ .hour, .hr{
+    width: 160px;
+    height: 160px;
+}
+.min,
+.mn {
+    width: 190px;
+    height: 190px;
+}
+.sec,
+.sc {
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: black;
+    z-index: 10;
+    border-radius: 6px;
+}
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    z-index: 11;
+        border-radius: 6px;
+    background-color: rgb(12, 11, 11);
+}
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    z-index: 12;
+        border-radius: 6px;
+    background-color: rgb(12, 11, 11);
+}
